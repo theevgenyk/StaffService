@@ -1,0 +1,22 @@
+﻿@model WebApplication2.Models.Employee
+@{
+    ViewBag.Title = "ChangeEmployee";
+    Layout = "_Layout";
+}
+
+<h2>Редактировать сотрудника</h2>
+
+    <form asp-action="InputIdForChangeEmployee" asp-controller="home">
+
+        <div class="form-group">
+            <label class="control-label">ID сотрудника</label>
+            <input type="text" asp-for="Id" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Изменить" class="btn btn-default"/>
+        </div>
+    </form>
+
+<div>
+    <a asp-action="Index">Назад</a>
+</div>

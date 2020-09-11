@@ -1,0 +1,34 @@
+﻿@model List<Employee>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h2> Список сотрудников</h2>
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>Имя</td>
+        <td>Фамилия</td>
+        <td>Телефон</td>
+        <td>ID компании</td>
+        <td>Серия паспорта</td>
+        <td>Номер паспорта</td>
+        <td></td>
+    </tr>
+    @foreach (var staff in Model)
+    {
+        <tr>
+            <td>@staff.Id</td>
+            <td>@staff.Name</td>
+            <td>@staff.Surname</td>
+            <td>@staff.Phone</td>
+            <td>@staff.CompanyId</td>
+            <td>@staff.PassportType</td>
+            <td>@staff.PassportNumber</td>
+        </tr>
+    }
+</table>
+<a asp-action="AddEmployee">Добавить сотрудника</a>
+<div>
+    <a asp-action="Index">Назад</a>
+</div>

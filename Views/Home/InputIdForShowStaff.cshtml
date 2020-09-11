@@ -1,0 +1,22 @@
+﻿@model WebApplication2.Models.Employee
+
+@{
+    ViewBag.Title = "ShowStaff";
+    Layout = "_Layout";
+}
+
+<h2>Список сотрудников компании</h2>
+<form asp-action="InputIdForShowStaff" asp-controller="home">
+
+    <div class="form-group">
+        <label class="control-label">ID компании</label>
+        <input type="text" asp-for="CompanyId" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Показать" class="btn btn-default"/>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Назад</a>
+</div>

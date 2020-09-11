@@ -1,0 +1,11 @@
+﻿@model WebApplication2.Models.Employee
+
+@{
+    ViewBag.Title = "Employee Service";
+    Layout = "_Layout";
+}
+<h2>Web-Сервис сотрудников</h2>
+<a asp-action="AddEmployee">Добавить сотрудника</a><br>
+<a asp-action="DeleteEmployee">Удалить сотрудника</a><br>
+<a asp-action="InputIdForShowStaff">Показать список сотрудников</a><br>
+<a asp-action="InputIdForChangeEmployee">Изменить сотрудника</a>
